@@ -1,4 +1,4 @@
-terraform {  #using this block to mention sepcific resource providers
+terraform { #using this block to mention sepcific resource providers
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
@@ -11,7 +11,7 @@ provider "docker" {}
 
 resource "docker_image" "nginx" { //using this block to download and keep docker image locally
   name         = "nginx:1.19.6"
-  keep_locally = true    // keep image after "destroy"
+  keep_locally = true // keep image after "destroy"
 }
 
 resource "docker_container" "nginx" {

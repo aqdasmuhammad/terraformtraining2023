@@ -3,4 +3,4 @@ variable "container_name" {
   # basic types include string, number and bool
   type    = string
   default = "TooLAzyToType"
-  }
+}

@@ -10,7 +10,7 @@ terraform {
 provider "docker" {}
 resource "docker_image" "nginx" {
   name         = "nginx:1.23.4"
-  keep_locally = true       // keep image after "destroy"
+  keep_locally = true // keep image after "destroy"
 }
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
